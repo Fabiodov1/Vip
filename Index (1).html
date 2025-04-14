@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curso VIP de Importação</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #00ffd5;
+      margin-bottom: 40px;
+    }
+
+    .modulo {
+      background: #1f2937;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-left: 6px solid #00ffd5;
+      border-radius: 12px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .modulo.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .modulo i {
+      font-size: 2rem;
+      color: #00ffd5;
+      margin-top: 5px;
+    }
+
+    .modulo-content {
+      flex: 1;
+    }
+
+    .modulo-content h2 {
+      margin-bottom: 10px;
+      color: #00ffcc;
+    }
+
+    .modulo-content p {
+      color: #d1d5db;
+      font-size: 1rem;
+    }
+
+    .btn-whatsapp {
+      display: block;
+      margin: 40px auto 0;
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      padding: 15px 30px;
+      border: none;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .btn-whatsapp:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-whatsapp i {
+      margin-right: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>O Que Você Vai Aprender</h1>
+
+    <div class="modulo">
+      <i class="bi bi-globe2"></i>
+      <div class="modulo-content">
+        <h2>Módulo 1: Introdução à Importação</h2>
+        <p>Entenda como funciona o mercado, por onde começar e os primeiros passos para se tornar um importador de sucesso.</p>
+      </div>
+    </div>
+
+    <div class="modulo">
+      <i class="bi bi-truck"></i>
+      <div class="modulo-content">
+        <h2>Módulo 2: Plataformas e Fornecedores</h2>
+        <p>Aprenda onde encontrar fornecedores confiáveis na China, EUA, Europa e como se cadastrar.</p>
+      </div>
+    </div>
+
+    <div class="modulo">
+      <i class="bi bi-box-seam"></i>
+      <div class="modulo-content">
+        <h2>Módulo 3: Produtos e Nichos</h2>
+        <p>Descubra quais produtos trazem maior lucro e como identificar tendências no mercado.</p>
+      </div>
+    </div>
+
+    <div class="modulo">
+      <i class="bi bi-airplane"></i>
+      <div class="modulo-content">
+        <h2>Módulo 4: Logística e Frete</h2>
+        <p>Como funciona o envio, rastreamento e entrega dos produtos importados direto para você.</p>
+      </div>
+    </div>
+
+    <div class="modulo">
+      <i class="bi bi-file-earmark-text"></i>
+      <div class="modulo-content">
+        <h2>Módulo 5: Taxas e Declaração</h2>
+        <p>Saiba como declarar seus produtos e reduzir custos legalmente, evitando multas e problemas.</p>
+      </div>
+    </div>
+
+    <div class="modulo">
+      <i class="bi bi-cart-check"></i>
+      <div class="modulo-content">
+        <h2>Módulo 6: Revenda Estratégica</h2>
+        <p>Crie uma loja no Instagram, WhatsApp ou site e comece a vender seus produtos com até 500% de lucro.</p>
+      </div>
+    </div>
+
+    <div class="modulo">
+      <i class="bi bi-stars"></i>
+      <div class="modulo-content">
+        <h2>Bônus Exclusivos</h2>
+        <p>Acesso ao grupo VIP, suporte direto, modelos prontos e acompanhamento do seu progresso.</p>
+      </div>
+    </div>
+
+    <a class="btn-whatsapp" href="https://chat.whatsapp.com/KQ8JF1kfgeH06kK4WCENUx" target="_blank">
+      <i class="bi bi-whatsapp"></i> Entrar no Grupo de espera
+    </a>
+
+    <div class="footer">
+      &copy; 2025 Curso VIP de Importação - Todos os direitos reservados.
+    </div>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.modulo').forEach(modulo => {
+      observer.observe(modulo);
+    });
+  </script>
+
+</body>
+</html>
